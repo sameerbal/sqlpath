@@ -1,0 +1,48 @@
+package dataMartDataCompare;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class SqlPath {
+
+	Scanner scan = new Scanner(System.in);
+	String arrayOfNames[] = new String[Integer.parseInt(scan.nextLine())];
+	
+	for(int i = 0;i<arrayOfNames.length;i++)
+	{
+		System.out.print("Enter serial number of SQL " + (i + 1) + " : ");
+		arrayOfNames[i] = scan.nextLine();
+	}
+
+	public static void SourceFiles()
+	{
+	List<String> results = new ArrayList<String>();
+
+
+	File[] files = new File("C:\\Users\\rr44273\\Desktop\\SourceSqlFolder").listFiles();
+	//If this pathname does not denote a directory, then listFiles() returns null. 
+
+	for (File file : files) {
+	    if (file.isFile()) {
+	        results.add(file.getName());
+	    }
+	}
+	for()
+	}
+
+	public static void TargetFiles() {
+		List<String> results = new ArrayList<String>();
+
+		File[] files = new File("C:\\Users\\rr44273\\Desktop\\SourceSqlFolder").listFiles();
+		// If this pathname does not denote a directory, then listFiles() returns null.
+
+		for (File file : files) {
+			if (file.isFile()) {
+				results.add(file.getName());
+			}
+		}
+	}
+
+}
